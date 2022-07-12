@@ -30,7 +30,7 @@ Route::post('articles', [ArticleController::class, 'store']);
 Route::put('articles', [ArticleController::class, 'store']);
 
 // Delete an article
-Route::delete('articles',  [ArticleController::class, 'destroy']);
+Route::delete('articles/{id}',  [ArticleController::class, 'destroy']);
 
 // List a single article
 Route::get('articles/{id}', [ArticleController::class, 'show']);

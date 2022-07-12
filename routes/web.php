@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,22 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::resource('article', ArticleController::class);
-
-// List articles
-Route::get('articles', [ArticleController::class, 'index']);
-
-// Create new articles
-Route::post('articles', [ArticleController::class, 'store']);
-
-// Update
-Route::put('articles', [ArticleController::class, 'store']);
-
-// Delete an article
-Route::delete('articles/{id}',  [ArticleController::class, 'destroy']);
-
-// List a single article
-Route::get('articles/{id}', [ArticleController::class, 'show']);
 
 
 

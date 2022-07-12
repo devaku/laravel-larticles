@@ -40,7 +40,6 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
         $article = $request->isMethod('put') ? Article::findOrFail($request->article_id) : new Article;
 
         $article->id = $request->input('article_id');
@@ -98,7 +97,6 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-        return 'hello';
         $article = Article::findOrFail($id);
         if($article->delete()){
             return new ArticleResource($article);
